@@ -1,6 +1,6 @@
-// 變量:
+// 4.變量:
 // [弱類型] var、dynamic、Object
-// [強類型] String、bool、int、double
+// [強類型] String、bool 
 void main() {
   //[弱類型]
 
