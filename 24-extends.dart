@@ -1,7 +1,11 @@
 void main(List<String> args) {
-  var a = new AndroidPhone(123);
+//調用動態
+  dynamic p = new AndroidPhone(1233);
+  p.sh123();
 
-  a.startup();
+  // var a = new AndroidPhone(123);
+
+  // a.startup();
 
   // var b = new AndroidPhone2();
   // b.startup();
@@ -31,12 +35,18 @@ abstract class IPhone2 {
 
 // 繼承父類
 class AndroidPhone extends Phone {
-
   // 調用父類構造函數
   AndroidPhone(int number) : super(number);
   void startup() {
     // super.startup();
     print('開機 父類 - ${number}');
+  }
+
+//重寫超類函數
+// noSuchMethod: 調用一個不存在的方法時,就是會觸發noSuchMethod
+  @override
+  void noSuchMethod(Invocation mirror) {
+    print('被重寫了');
   }
 
   // void startup(){
